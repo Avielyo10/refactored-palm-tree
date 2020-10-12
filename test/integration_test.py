@@ -33,11 +33,11 @@ for test_number in range(1, NUM_OF_TESTS + 1):
 
     if dp_strategy.cmax == complete_search_strategy.cmax:
         SUCCESS += 1
-        print(f"Test #{test_number}: SUCCESS")
+        print(f"Test #{test_number}: \033[92m\33[1mSUCCESS\33[0m")
     else:
         FAILURES += 1
-        print(f"Test #{test_number}: FAILED")
+        print(f"Test #{test_number}: \033[91m\33[1mFAILED\33[0m")
 
     print("-"*80)
 
-print(f"SUCCESS: {SUCCESS}/{NUM_OF_TESTS}, FAILURES: {FAILURES}/{NUM_OF_TESTS}")
+print(f"SUCCESS: \033[92m\33[1m{SUCCESS}\33[0m/{NUM_OF_TESTS}, FAILURES: \033[91m\33[1m{FAILURES}\33[0m/{NUM_OF_TESTS}")
