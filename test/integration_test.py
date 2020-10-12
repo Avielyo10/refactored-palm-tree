@@ -31,7 +31,8 @@ for test_number in range(1, NUM_OF_TESTS + 1):
     print(f"Process time of {complete_search_strategy.name}: {mid-start}")
     print(f"Process time of {dp_strategy.name}: {end-mid}")
 
-    if dp_strategy.cmax == complete_search_strategy.cmax:
+    if dp_strategy.cmax == complete_search_strategy.cmax and \
+        dp_strategy.correct_order == complete_search_strategy.correct_order:
         SUCCESS += 1
         print(f"Test #{test_number}: \033[92m\33[1mSUCCESS\33[0m")
     else:
@@ -40,4 +41,5 @@ for test_number in range(1, NUM_OF_TESTS + 1):
 
     print("-"*80)
 
-print(f"SUCCESS: \033[92m\33[1m{SUCCESS}\33[0m/{NUM_OF_TESTS}, FAILURES: \033[91m\33[1m{FAILURES}\33[0m/{NUM_OF_TESTS}")
+print(
+    f"SUCCESS: \033[92m\33[1m{SUCCESS}\33[0m/{NUM_OF_TESTS}, FAILURES: \033[91m\33[1m{FAILURES}\33[0m/{NUM_OF_TESTS}")
