@@ -11,5 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: test
+    - name: unittest
       run: python3 -m unittest discover -v
+    - name: More integration test
+      run: |
+        cp test/integration_test.py .
+        python3 integration_test.py

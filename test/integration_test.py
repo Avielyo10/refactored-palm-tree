@@ -3,7 +3,7 @@ import time
 from strategies.complete_search import CompleteStrategy
 from strategies.dp import DP
 
-NUM_OF_JOBS = 7
+NUM_OF_JOBS = 8
 NUM_OF_TESTS = 10000
 SUCCESS = 0
 FAILURES = 0
